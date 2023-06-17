@@ -1,82 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <head> -> tag onde ficam as configurações da página-->
+<!-- <body> -> tag onde ficam todos os elementos visuais da página-->
+<!-- <div> -> tag usada para criar divisões, grupos de elementos, ou seja, um container de elementos-->
+<!-- <video> -> tag usada para acrescentar um video-->
+<!-- <source> -> tag usada para determinar a fonte do video (link ou caminho dele), que será apresentado-->
+<!-- <header> -> tag que determina que tudo que estiver dentro dela faz parte do cabeçalho da página, ou seja, é o container do cabeçalho da página-->
+<!-- <a> -> tag utilizada para criar um link dentro da página, para conteúdo externo ou interno-->
+<!-- <img> -> tag utilizada para adicionar uma imagem-->
+<!-- <nav> -> é uma tag utilizada para criar elementos de navegação dentro da página, ou seja, um container para elementos de navegação-->
+<!-- <ul> -> tag usada para criar uma lista não ordenada (sem números)-->
+<!-- <li> -> tag usada para criar um elemento dentro de uma lista-->
+<!-- <p> -> tag usada para criar um parágrafo de texto corrido-->
+<!-- <hr> -> tag usada para cria uma linha horizontal-->
+<!-- <span> -> tag usada para containers em linha para conteúdos fraseados, ou seja, para textos-->
+<!-- <iframe> -> é uma tag utilizada para incorporar conteúdos multimídia de outros sites (por exemplo videos do youtube), na página-->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
-
-    <link rel="shortcut icon" href="./assests/img/favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-
-    <title>GedaiFlix</title>
-
-</head>
-<body>
-    <div class="background-video">
-        <video class="video" autoplay loop muted>
-            <source src="./assets/video/background-video.mp4" type="video/mp4" />
-        </video>
-    </div>
-    <header class="header">
-        <a>
-            <img class="logo" src="./assets/img/logo.png" alt="LOGO-PAGINA" />
-        </a>
-
-        <nav>
-            <ul class="menu">
-                <li>
-                    <a href="#catalog">Catalogo</a>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
-    <div class="title-section">
-        <div class="title-container">
-            <div class="introduction">
-                <img class="title-image" src="./assets/img/Title.png" 
-                alt="titulo-GEDAIFLIX"/>
-                <p class="description">
-                    Bem-vindo ao GEDAIFLIX - o destino perfeito para todos os fãs de Star Wars! Aqui, você pode encontrar trailers de todos os filmes da franquia principal, desde os clássicos originais até as mais recentes aventuras no universo desta magnífica saga. Explore nosso catálogo para encontrar previews emocionantes, sinopses detalhadas e muito mais. Junte-se a nós e embarque em uma jornada épica pela galáxia distante de Star Wars.
-                </p>
-            </div>
-            <img class="intro-image" src="./assets/img/page-image.png"
-            alt="IMAGE-DARTHVADER" />
-        </div>
-    </div>
-
-    <div class="episode-section">
-        <div id="catalog" class="catalog-title">
-            <hr />
-            <span>Catalogo</span>
-        </div>
-        <div class="episode-container">
-        </div>
-    </div>
-
-    <div class="modal">
-        <div class="modal-content">
-            <span class="close-modal">X</span>
-            <iframe width="560" height="315" 
-            src="https://www.youtube.com/watch?v=K_11o-p9hZ0"
-            title="trailer" frameborder="i"
-            allow="accelerameter; autoplay; 
-            clipboard-write; encrypted-media;
-            gyroscope; picture-in-picture"
-            allowfullscreen>
-            
-            </iframe>
-        </div>
-    </div>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
     
-</body>
-
-<script src="./src/js/index.js"></script>
-
-</html>
+    <head> <!--Cabeça da página (onde ficam as configurações como, por exemplo, o tipo de fonte)-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    
+        <link rel="stylesheet" href="./src/css/reset.css">
+        <link rel="stylesheet" href="./src/css/style.css">
+    
+        <title>GEDAIFLIX</title>
+    </head>
+    
+    <body> <!--Corpo da página (onde ficam os elementos visuais)-->
+        
+        <div class="background-video"> <!--Parte do video de fundo da página-->
+            <video class="video" autoplay loop muted>
+                <source src="./assets/video/background-video.mp4" type="video/mp4" />
+            </video>
+        </div>
+    
+        <header class="header"> <!--cabeçalho da página, onde fica a logo e os links de navegação-->
+            <a>
+                <img class="logo" src="./assets/img/logo.png" alt="LOGO-PAGINA" />
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#catalog">Catálogo</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+        <div class="title-section"> <!--Parte de introdução da página, onde fica o título da página e o texto de introdução-->
+            <div class="title-container">
+                <div class="introduction">
+                    <img class="title-image" src="./assets/img/Title.png" alt="titulo-GEDAIFLIX"/>
+                    <p class="description">
+                        Bem-vindo ao GEDAIFLIX - o destino perfeito para todos os fãs de Star Wars! Aqui, você pode encontrar trailers de todos os filmes da franquia principal, desde os clássicos originais até as mais recentes aventuras no universo desta magnífica saga. Explore nosso catálogo para encontrar previews emocionantes, sinopses detalhadas e muito mais. Junte-se a nós e embarque em uma jornada épica pela galáxia distante de Star Wars.
+                    </p>
+                </div>
+                <img class="intro-image" src="./assets/img/page-image.png" alt="IMAGEM-DARTHVADER"/>
+            </div>
+        </div>
+    
+        <div class="episode-section"> <!--Parte onde será mostrado o catálogo de videos (trailers dos filmes) da página, com cards que serão criados a partir do javascript-->
+            <div id="catalog" class="catalog-title">
+                <hr />
+                <span>Catálogo</span>
+            </div>
+            <div class="episode-container">
+            </div>
+        </div>
+    
+        <div class="modal"> <!--parte do modal, ou seja, o pop-up (elemento que fica acima de todos os elementos da tela, normalmente no meio da página), onde serão mostrados os videos (trailers dos filmes)-->
+            <div class="modal-content">
+                <span class="close-modal">X</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IBcwY3BrQtA" title="trailer" frameborder = "1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    
+    </body>
+    
+    <script src="./src/js/index.js"></script>
+    
+    </html>

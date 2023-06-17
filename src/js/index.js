@@ -6,17 +6,17 @@ window.onload = function () {
 
         const cards = document.querySelector(".episode-container");
 
-        responde.array.forEach(element => {
+        response.forEach(cardData => {
             const card = document.createElement("div");
             card.className = "card";
 
             const front = document.createElement("div");
-            front.className = "front"
+            front.className = "front";
 
-            const frontimg = document.createElement("img");
+            const frontImg = document.createElement("img");
             frontImg.alt = cardData.name;
             frontImg.className = "card-image";
-            frontImg.src = `data:Image/jpg;base64,${cardData.Image}`;
+            frontImg.src = `data:image/jpg;base64,${cardData.image}`;
 
             front.appendChild(frontImg);
             card.appendChild(front);
@@ -26,14 +26,18 @@ window.onload = function () {
 
             const h2 = document.createElement("h2");
             h2.textContent = cardData.name;
+            
+            back.appendChild(h2);
 
             const p = document.createElement("p");
-            p.textContent = "trailer-button";
+            p.textContent = cardData.desc;
+            
+            back.appendChild(p);
 
             const button = document.createElement("button");
             button.className = "trailer-button";
             button.id = cardData.trailer;
-            button.textContent = "Veja o trailer"
+            button.textContent = "Veja o trailer";
 
             back.appendChild(button);
 
@@ -42,8 +46,8 @@ window.onload = function () {
             cards.appendChild(card);
         });
     })
-    .catch((error) => {
+    .catch((error) =>{
         console.log(error);
-        alert('erro ao retornar dados.')
+        alert('erro ao retornar dados.');
     })
 }
